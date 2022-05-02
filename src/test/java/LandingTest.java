@@ -1,11 +1,11 @@
-import Steps.ElementsSteps;
+import Steps.ElementSteps;
 import Steps.LandingSteps;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LandingTest extends BaseTest{
 
-    ElementsSteps elementSteps = new ElementsSteps(webDriver);
+    ElementSteps elementSteps = new ElementSteps(webDriver);
     LandingSteps landingsSteps =new LandingSteps(webDriver);
 
     @Test
