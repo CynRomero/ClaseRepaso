@@ -8,6 +8,13 @@ public class ElementTest extends BaseTest {
     LandingSteps landingSteps = new LandingSteps ( webDriver );
 
     @Test
+    public void testElementTextBox(){
+        landingSteps.clickOptions (0);
+        elementSteps.clicElementTexBox (0);
+
+    }
+
+    @Test
     public void testDropDown ( ) {
         webDriver.get ( "https://demoqa.com/select-menu" );
         //Select by visibleText Aqua
