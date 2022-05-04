@@ -1,5 +1,6 @@
 import Steps.ElementSteps;
 import Steps.LandingSteps;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ElementTest extends BaseTest {
@@ -11,7 +12,16 @@ public class ElementTest extends BaseTest {
     public void testElementTextBox(){
         landingSteps.clickOptions (0);
         elementSteps.clicElementTexBox (0);
-
+        System.out.println("The element name of Full Name is : "+elementSteps.getTextFullName());
+        Assert.assertEquals(elementSteps.getTextFullName(), "Full Name");
+        System.out.println("The element name of email is : "+elementSteps.getTextEmail());
+        Assert.assertEquals(elementSteps.getTextEmail(),"Email");
+        System.out.println("The element name of current address is : "+ elementSteps.getTextCurrentAddress());
+        Assert.assertEquals(elementSteps.getTextCurrentAddress(),"Current Address");
+        System.out.println("The element name of permanent address is : "+ elementSteps.getTextPermanentAddress());
+        Assert.assertEquals(elementSteps.getTextPermanentAddress(),"Permanent Address");
+        System.out.println("The element name of button is : "+elementSteps.getSubmitButton ());
+        Assert.assertEquals(elementSteps.getSubmitButton (),"Submit");
     }
 
     @Test

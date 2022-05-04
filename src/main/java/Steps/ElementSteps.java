@@ -46,11 +46,34 @@ public class ElementSteps extends BaseSteps {
         return selectedOption.getText ();
     }
 
-    //Tarea 2:  Validar que estén presentes los campos: Full Name, Email, Current Address, Permanent Address y el Submit button.
 
     //Dar clic en  el elemento Text Box
     public void clicElementTexBox (int option) {
         elementsPage.getMenuoptionsElements ().get (option).click ();
     }
+
+    //Tarea 2:  Validar que estén presentes los campos: Full Name, Email, Current Address y el Submit button.
+
+    public String getTextFullName(){
+        String fullName = elementsPage.getFullName ().getText ();
+        return fullName;
+    }
+    public String getTextEmail(){
+        String email = elementsPage.getEmail ().getText ();
+        return email;
+    }
+    public String getTextCurrentAddress(){
+        String currentAddress = elementsPage.getCurrentAddress ().getText ();
+        return currentAddress;
+    }
+    public String getTextPermanentAddress(){
+        String permanentAddress = elementsPage.getPermanentAddress ().getText ();
+        return permanentAddress;
+    }
+    public String getSubmitButton(){
+        String submitButton = elementsPage.getSubmitButton ().getText ();
+        return submitButton;
+    }
+
 
 }
