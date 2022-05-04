@@ -23,16 +23,16 @@ public class ElementsPage extends BasePage {
 
     //Localizador de labelFull Name
     private String fullNameCssLocator = ".col-md-3.col-sm-12>#userName-label";
-    private String fullNameXpath = "//input[@id='userName']";
+    private String fullNameXpath = "//label[@id='userName-label']";
     //Localizador  Email
     private String emailCssLocator = ".col-md-3.col-sm-12>#userEmail-label";
-    private String emailXpath = "//input[@id='userEmail']";
+    private String emailXpath = "//label[@id='userEmail-label']";
     //Localizador Current Address
     private String currentAddressCssLocator = ".col-md-3.col-sm-12>#currentAddress-label";
-    private String currentAddressXpath = "//textarea[@id='currentAddress']";
+    private String currentAddressXpath = "//label[@id='currentAddress-label']";
     //Localizador Address
     private String permanentAddressCssLocator= ".col-md-3.col-sm-12>#permanentAddress-label";
-    private String permanentAddressXpath= "//textarea[@id='permanentAddress']";
+    private String permanentAddressXpath= "//label[@id='permanentAddress-label']";
     //Localizador boton Submit
     private String submitButton = "#submit";
     private String submitButtonXpath = "//button[@id='submit']";
