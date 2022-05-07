@@ -24,15 +24,21 @@ public class ElementsPage extends BasePage {
     //Localizador de labelFull Name
     private String fullNameCssLocator = ".col-md-3.col-sm-12>#userName-label";
     private String fullNameXpath = "//label[@id='userName-label']";
+    private String fullNameTextBoxXpath="//input[@id='userName']";
     //Localizador  Email
     private String emailCssLocator = ".col-md-3.col-sm-12>#userEmail-label";
     private String emailXpath = "//label[@id='userEmail-label']";
+    private String emailTextXpath= "//input[@id='userEmail']";
+    private String emailDisplayed="//div[@id='output']";
+
     //Localizador Current Address
     private String currentAddressCssLocator = ".col-md-3.col-sm-12>#currentAddress-label";
     private String currentAddressXpath = "//label[@id='currentAddress-label']";
+    private String currentAddressTexBoxXpath="//textarea[@id='currentAddress']";
     //Localizador Address
     private String permanentAddressCssLocator= ".col-md-3.col-sm-12>#permanentAddress-label";
     private String permanentAddressXpath= "//label[@id='permanentAddress-label']";
+    private String permanentAddressTexBoxXpath="//textarea[@id='permanentAddress']";
     //Localizador boton Submit
     private String submitButton = "#submit";
     private String submitButtonXpath = "//button[@id='submit']";
@@ -75,9 +81,35 @@ public class ElementsPage extends BasePage {
         WebElement elementAddress = webDriver.findElement(By.cssSelector(permanentAddressCssLocator));
         return elementAddress;
     }
+
+       //TextBox Elements
+
+    public WebElement getEmailInput(){
+        WebElement fullNameText= webDriver.findElement (By.xpath (emailTextXpath));
+        return fullNameText;
+    }
+    //Click Button
     public WebElement getSubmitButton(){
-        WebElement elementSubmitButton = webDriver.findElement(By.cssSelector(submitButton));
+        WebElement elementSubmitButton = webDriver.findElement(By.xpath (submitButtonXpath));
         return elementSubmitButton;
     }
 
+    public WebElement getEmailDisplayedFalse(){
+        WebElement fullNameText= webDriver.findElement (By.xpath (emailDisplayed));
+        return fullNameText;
+    }
+
+    public WebElement getFullNameInput(){
+        WebElement fullNameText= webDriver.findElement (By.xpath (fullNameTextBoxXpath));
+        return fullNameText;
+    }
+    public WebElement getCurrentAddressInput(){
+        WebElement fullNameText= webDriver.findElement (By.xpath (currentAddressTexBoxXpath));
+        return fullNameText;
+    }
+
+    public WebElement getPermanentAddressInput(){
+        WebElement fullNameText= webDriver.findElement (By.xpath (permanentAddressTexBoxXpath));
+        return fullNameText;
+    }
 }
